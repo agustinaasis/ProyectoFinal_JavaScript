@@ -8,12 +8,55 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="explicacion">
-        <h1>Tienda Online - E-commerce (Venta de artículos de diseño para el hogar)</h1>
-        <p> - La idea sería darle la bienvenida al usuario, por lo que ingresa su nombre y recibe un saludo. Preferí el ciclo "while" para que en caso de que el usuario ingrese un caracter incorrecto o un número, el prompt vuelva a aparecer y pida nuevamente que ingrese el dato, pero esta vez, de manera correcta.</p>
-        <p>- Me gustaría crear una sección en donde el usuario ingrese el número o el nombre de la opción elegida o espacio a decorar, y que la página lo dirija hacia esa sección. Un "filtro". Como no sé hacerlo, puse la opción de un "alert" con un mensaje relacionado al espacio elegido.</p>
-        <p>- Para agregar más elementos de los aprendidos, incorporo la función de seleccionar turno para visitar el showroom. Lo hice tal cuál nos enseñó el Profe en clases, mostrando disponibilidad por consola. Imagino que más adelante sabremos cómo hacerlo de una manera más adecuada.</p>
-    </div>
+
+    <main>
+        <h1>Tienda Online</h1>
+        <container id="tienda">
+            <div>
+            </div>
+        </container>
+
+
+        <h2>Carrito</h2>
+        <div id="carrito">
+        </div> 
+
+
+        <h3>Buscador</h3> 
+        <input type="search" placeholder="Buscar..."
+            class="filtro-carta"> 
+
+            <article class="cartas">
+
+                <figure class="carta">
+                    <img class="imagenDeMuestra" src="./imgcocina/cuchillos1.png" alt="cuchillos de diseño">
+                    <figcaption>Cuchillos de diseño</figcaption>
+                </figure>
+
+                <figure class="carta">
+                    <img class="imagenDeMuestra" src="./imgcocina/utensilios1.png" alt="cuchillos de bamboo">
+                    <figcaption>Cuchillos de bamboo</figcaption>
+                </figure>
+
+                <figure class="carta">
+                    <img class="imagenDeMuestra" src="./imgcocina/capsulas1.png" alt="Soporte para capsulas">
+                    <figcaption>Soporte para cápsulas</figcaption>
+                </figure>
+
+                <figure class="carta">
+                    <img class="imagenDeMuestra" src="./imgcocina/aceitera3.png" alt="Set condimentos">
+                    <figcaption>Set condimentos</figcaption>
+                </figure>
+
+                <figure class="carta">
+                    <img class="imagenDeMuestra" src="./imgcocina/bateria1.png" alt="Batería de cocina">
+                    <figcaption>Batería de cocina</figcaption>
+                </figure>
+
+            </article> 
+
+    </main>
+
     <script src="./js/main.js"></script>
 </body>
 </html>

@@ -12,3 +12,22 @@ p{
     color: $color-fuente;
     font-size: $tamano-fuente;
 }
+
+// #tienda{
+//     display: inline-flex;
+// }
+#tienda{
+    display: contents;
+}
+
+.imagenDeMuestra {
+margin-top: 40px;
+ width: 300px;
+ height: 300px;
+}
+
+.filter{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}

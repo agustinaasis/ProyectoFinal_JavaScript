@@ -12,6 +12,10 @@ p {
   font-size: 1.2em;
 }
 
+.explicacionTienda {
+  background-color: rgb(228, 200, 164);
+}
+
 #tienda {
   display: contents;
 }

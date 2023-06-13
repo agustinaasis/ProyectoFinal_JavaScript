@@ -50,7 +50,6 @@ const BBDD = [
 ]
 
 
-
 let CARRITO = [] ;
 
 function renderizarProductos(){

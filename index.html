@@ -10,50 +10,57 @@
 <body>
 
     <main>
-        <h1>Tienda Online</h1>
-        <container id="tienda">
-            <div>
-            </div>
-        </container>
+        <div class="explicacionTienda">
+            <h1>Explicación del simulador:</h1>
+            <p>En este simulador intento representar una tienda o e-commerce. Gracias a la ayuda de Luis pude aplicar lo trabajado en las clases.</p>
+            <p>Agrego un buscador donde se pueden encontrar los distintos productos por nombre. Sé que lo ideal hubiese sido hacerlo desde JS dinámico usando el mismo array de productos, pero no lo pude lograr así que viendo que funciona y no tiene errores en la vista del HTML ni por consola, y apostando a aprender más para seguir mejorando, espero cumplir con lo solicitado para esta entrega.</p>
+            <p>P/d: necesito seguir practicando para poder darle estilo y ordenar los contenedores del sitio. Perdón por tan poco jajaj</p>
+        </div>
 
 
+<hr>
+        <h2>Tienda Online</h2>
+        <div id="tienda">
+        </div>
+
+<hr>
         <h2>Carrito</h2>
         <div id="carrito">
         </div> 
 
+<hr>
+        <h2>Buscador</h2> 
+        <div id="filtroCarta">
+            <input type="search" placeholder="Buscar..."
+                class="filtro-carta">  
 
-        <h3>Buscador</h3> 
-        <input type="search" placeholder="Buscar..."
-            class="filtro-carta"> 
+                <article class="cartas">
+                    <figure class="carta">
+                        <img class="imagenDeMuestra" src="./imgcocina/cuchillos1.png" alt="cuchillos de diseño">
+                        <figcaption>Cuchillos de diseño</figcaption>
+                    </figure>
 
-            <article class="cartas">
+                    <figure class="carta">
+                        <img class="imagenDeMuestra" src="./imgcocina/utensilios1.png" alt="cuchillos de bamboo">
+                        <figcaption>Cuchillos de bamboo</figcaption>
+                    </figure>
 
-                <figure class="carta">
-                    <img class="imagenDeMuestra" src="./imgcocina/cuchillos1.png" alt="cuchillos de diseño">
-                    <figcaption>Cuchillos de diseño</figcaption>
-                </figure>
+                    <figure class="carta">
+                        <img class="imagenDeMuestra" src="./imgcocina/capsulas1.png" alt="Soporte para capsulas">
+                        <figcaption>Soporte para cápsulas</figcaption>
+                    </figure>
 
-                <figure class="carta">
-                    <img class="imagenDeMuestra" src="./imgcocina/utensilios1.png" alt="cuchillos de bamboo">
-                    <figcaption>Cuchillos de bamboo</figcaption>
-                </figure>
+                    <figure class="carta">
+                        <img class="imagenDeMuestra" src="./imgcocina/aceitera3.png" alt="Set condimentos">
+                        <figcaption>Set condimentos</figcaption>
+                    </figure>
 
-                <figure class="carta">
-                    <img class="imagenDeMuestra" src="./imgcocina/capsulas1.png" alt="Soporte para capsulas">
-                    <figcaption>Soporte para cápsulas</figcaption>
-                </figure>
-
-                <figure class="carta">
-                    <img class="imagenDeMuestra" src="./imgcocina/aceitera3.png" alt="Set condimentos">
-                    <figcaption>Set condimentos</figcaption>
-                </figure>
-
-                <figure class="carta">
-                    <img class="imagenDeMuestra" src="./imgcocina/bateria1.png" alt="Batería de cocina">
-                    <figcaption>Batería de cocina</figcaption>
-                </figure>
-
-            </article> 
+                    <figure class="carta">
+                        <img class="imagenDeMuestra" src="./imgcocina/bateria1.png" alt="Batería de cocina">
+                        <figcaption>Batería de cocina</figcaption>
+                    </figure>
+                </article> 
+        </div>
 
     </main>
 

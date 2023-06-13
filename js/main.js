@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", cargaInicial);
 
 function cargaInicial(){
-    cargarCarritoDeLocalStorage();
+    // guardarCarritoEnLocalStorage();
     renderizarProductos();
     renderizarCarrito();
 }
@@ -49,6 +49,8 @@ const BBDD = [
 
 ]
 
+
+
 let CARRITO = [] ;
 
 function renderizarProductos(){
@@ -77,6 +79,7 @@ function renderizarProductos(){
 
 }
 renderizarProductos();
+
 
 
 function agregarAlCarrito(id){
@@ -122,6 +125,7 @@ function renderizarCarrito(){
     }
 
 
+
 function eliminarProductoDelCarrito(indice){
     CARRITO[indice].cantidad --;
 
@@ -132,6 +136,7 @@ function eliminarProductoDelCarrito(indice){
     renderizarCarrito();
     guardarCarritoEnLocalStorage();
 }
+
 
 
 function guardarCarritoEnLocalStorage(){
@@ -145,6 +150,7 @@ function cargarCarritoDeLocalStorage(){
     }else{
         CARRITO = [];
     }
+    console.log(cargarCarritoDeLocalStorage);
 }
 
 

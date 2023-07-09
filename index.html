@@ -18,22 +18,20 @@
     <nav>
       <ul>
         <li>
-          <a>Categorias</a>
+          <a class= "categorias" >Categorias</a>
           <ul class="submenu hidden">
             <li style="display: flex; align-items: center;">
-              <a id="reloj">Reloj</a>
+              <a id="cocina">Cocina</a>
             </li>
-            <li><a id="bicicleta">Bicicletas</a></li>
-            <li><a id="auriculares">Auriculares</a></li>
+            <li><a id="habitacion">Habitación</a></li>
+            <li><a id="living">Living</a></li>
           </ul>
           </a>
         </li>
-        <li><a href="#">Ofertas</a></li>
-        <li><a href="#">Historial</a></li>
-        <li>
+
           <a href="#" id="cart-icon">
             <img src="./assets/logos/icon_carrito.svg" alt="" class="cart">
-            <span id="contador">0</span>
+            <span id="contador"> 0 </span>
           </a>
         </li>
       </ul>
@@ -43,29 +41,17 @@
 
     <!--Modal-->
     <div class="modal" id="cart-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Carrito de compras</h2>
-        <div class="contenedor_compras">
-          <div class="tbody">
-            <div class="columna_1">
-              <img src="./assets/logos/shortcuticon.png" alt="" class="img_cart">
-            </div>
-            <div class="columna_2">
-              Nombre del producto
-            </div>
-            <div class="columna_3">
-              <input type="number">
-            </div>
-            <div class="columna_4">
-              Precio
-            </div>
-            <div>
-              <button>X</button>
-            </div>
+        <div class="modal-content">
+          
+          <span class="close">&times;</span>
+
+          <h2>Carrito de compras</h2>
+
+          <div class="contenedor_compras">
+            <div class="tbody"> </div>
           </div>
+
         </div>
-      </div>
     </div>
 
 
@@ -76,6 +62,7 @@
 
   </main>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./js/submenu.js" type="module"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/app.js" type="module"></script>
 </body>

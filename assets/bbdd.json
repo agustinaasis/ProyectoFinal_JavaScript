@@ -5,43 +5,146 @@
         "nombre": "Cuchillos diseño",
         "imagen": "assets/imgcocina/cuchillos1.png",
         "descripcion": "Set de 3 cuchillos con diseño en colores combinados.",
-        "precio": "$2500"
+        "precio": "$2500",
+        "categoria": "cocina"
     },
     {
         "id": 2,
         "nombre": "Cuchillos bamboo",
         "imagen": "assets/imgcocina/utensilios1.png",
-        "descripcion": "Set de 5 cuchillos con mango de bamboo. Incluye tijera y soporte a medida.",
-        "precio": "$3800"
+        "descripcion": "Set de 5 cuchillos con mango de bamboo. Incluye tijera y soporte.",
+        "precio": "$3800",
+        "categoria": "cocina"
+        
     },
     {
         "id": 3,
         "nombre": "Soporte para cápsulas",
         "imagen": "assets/imgcocina/capsulas1.png",
         "descripcion": "Soporte de pared para organizar cápsulas de café.",
-        "precio": "$1900"
+        "precio": "$1900",
+        "categoria": "cocina"
     },
     {
         "id": 4,
         "nombre": "Set condimentos",
         "imagen": "assets/imgcocina/aceitera3.png",
         "descripcion": "Set de 4 piezas, ideal para condimentar ensaladas y todas tus comidas.",
-        "precio": "$2600"
+        "precio": "$2600",
+        "categoria": "cocina"
     },
     {
         "id": 5,
         "nombre": "Batería de cocina",
         "imagen": "assets/imgcocina/bateria1.png",
         "descripcion": "Set de 3 sartenes, con interior de cerámica antiadherente.",
-        "precio": "$4700"
+        "precio": "$4700",
+        "categoria": "cocina"
     },
     {
         "id": 6,
-        "nombre": "Estante para botellas y copas",
+        "nombre": "Botellero",
         "imagen": "assets/imgcocina/botellero1.png",
-        "descripcion": "estante con capacidad para colocar hasta 5 botellas. Cuenta con soporte para copas.",
-        "precio": "$3900"
-    }
+        "descripcion": "Estante para almacenar hasta 5 botellas y juego de copas.",
+        "precio": "$3900",
+        "categoria": "cocina"
+    },
+    {
+        "id": 7,
+        "nombre": "Biombo",
+        "imagen": "assets/imghabitacion/biombonegro1.png",
+        "descripcion": "Biombo de estructira sólida ideal para separar los ambientes.",
+        "precio": "$6300",
+        "categoria": "habitacion"
+    },
+    {
+        "id": 8,
+        "nombre": "Tapiz",
+        "imagen": "assets/imghabitacion/tapiz1.png",
+        "descripcion": "Tapiz tejido en macramé, para darle un toque deco a tus ambientes.",
+        "precio": "$4100",
+        "categoria": "habitacion"
+    },
+    {
+        "id": 9,
+        "nombre": "Sillón colgante",
+        "imagen": "assets/imghabitacion/silloncolgante1.png",
+        "descripcion": "Espectacular y cómodo sillón con tejido macramé.",
+        "precio": "$7300",
+        "categoria": "habitacion"
+    },
+    {
+        "id": 10,
+        "nombre": "Lámpara de mesa",
+        "imagen": "assets/imghabitacion/lamparademesa1.png",
+        "descripcion": "Set de lámparas de mesa para iluminar tu cuarto.",
+        "precio": "$9100",
+        "categoria": "habitacion"
+    },
+    {
+        "id": 11,
+        "nombre": "Mantas",
+        "imagen": "assets/imghabitacion/mantas1.png",
+        "descripcion": "Mantas en diferentes colores para decorar y abrigar tu cama.",
+        "precio": "$3800",
+        "categoria": "habitacion"
+    },
+    {
+        "id": 12,
+        "nombre": "Perchero",
+        "imagen": "assets/imghabitacion/perchero1.png",
+        "descripcion": "Perchero minimalista con estilo industrial.",
+        "precio": "$6400",
+        "categoria": "habitacion"
+    },
+    {
+        "id": 13,
+        "nombre": "Kit de cestas",
+        "imagen": "assets/imgliving/kitcesta1.png",
+        "descripcion": "Cestas tejidas para adornar y ordenar tus espacios.",
+        "precio": "$5800",
+        "categoria": "living"
+    },
+    {
+        "id": 14,
+        "nombre": "Lámpara de pie",
+        "imagen": "assets/imgliving/lamparadepie.png",
+        "descripcion": "Ilumina con calidez tu living con esta hermosa lámpara de diseño clásico.",
+        "precio": "$8100",
+        "categoria": "living"
+    },
+    {
+        "id": 15,
+        "nombre": "Revistero",
+        "imagen": "assets/imgliving/revisteroyute1.png",
+        "descripcion": "Organizador de diarios y revistas en tejido natural de yute.",
+        "precio": "$3500",
+        "categoria": "living"
+    },
+    {
+        "id": 16,
+        "nombre": "Revistero",
+        "imagen": "assets/imgliving/revisteromacrame1.png",
+        "descripcion": "Organizador de diarios y revistas en tejido natural de macramé.",
+        "precio": "$3800",
+        "categoria": "living"
+    },
+    {
+        "id": 17,
+        "nombre": "Estantería",
+        "imagen": "assets/imgliving/estanteria1.png",
+        "descripcion": "Estantería para adornar y organizar tu living con estilo propio.",
+        "precio": "$4100",
+        "categoria": "living"
+},
+{
+    "id": 18,
+    "nombre": "Alfombra",
+    "imagen": "assets/imgliving/alfombrayute1.png",
+    "descripcion": "Alfombra tejida con hilo de yute natural.",
+    "precio": "$5300",
+    "categoria": "living"
 
+}
 
 ]

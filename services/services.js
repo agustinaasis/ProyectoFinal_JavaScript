@@ -1,6 +1,7 @@
+
 async function obtenerProductos() {
 
-    const respuesta = await fetch (`../assets/bbdd.json`)
+    const respuesta = await fetch (('././assets/bbdd.json'))
     
     const productos = await respuesta.json()
     
@@ -9,6 +10,7 @@ async function obtenerProductos() {
     }
 
 obtenerProductos();
+
 
 
 export { obtenerProductos }

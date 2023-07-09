@@ -1,16 +1,27 @@
 import { obtenerProductos } from "../services/services.js";
 
-obtenerProductos();
+const $carrito = document.querySelector(`#contador`);
+
+
 
 
 const cargaInicial = () => {
+
+  obtenerCarritoDeLocalStorage();
   obtenerProductos();
+  renderizarCarrito();
+
 }
 
 document.addEventListener(`DOMContentLoaded`, cargaInicial);
 
 
+
+
+
 let CARRITO = [];
+
+
 
 
 async function mostrarProductos() {
@@ -27,7 +38,7 @@ async function mostrarProductos() {
             <div class="card" style="width: 18rem;">
             <div class="card-body">
             <h3 class="card-text titulo-producto"> ${producto.nombre} </h3>
-            <img src= "${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+            <img src= "${producto.imagen}" class="card-img-top imagen-tarjeta" alt="${producto.nombre}">
             <h4 class="card-text"> ${producto.precio} </h4>
             <p class="card-text descripcion"> ${producto.descripcion} </p>
             <button id="${producto.id}" class="card-link"> Agregar al carrito </button>
@@ -38,18 +49,21 @@ async function mostrarProductos() {
     contenedor.appendChild(cardProducto)
 
     const btnAgregar = document.getElementById(`${producto.id}`)
-    btnAgregar.addEventListener("click" , () => agregarAlCarrito(producto.id) )
-
-        })
-
+    btnAgregar.addEventListener("click" , () => {
+        agregarAlCarrito(producto)
+      })
+    })
   }
 
 
 mostrarProductos()
 
 
-const agregarAlCarrito = (producto) => {
 
+
+
+
+const agregarAlCarrito = (producto) => {
 
   const productoEnCarrito = CARRITO.find (item => item.id === producto.id);
 
@@ -61,21 +75,32 @@ const agregarAlCarrito = (producto) => {
 
     CARRITO.push({
       id : producto.id,
+      imagen : producto.imagen,
       nombre : producto.nombre,
       precio : producto.precio,
-      imagen : producto.imagen,
       cantidad : 1
     })
   }
 
+
+  const totalCantidad = CARRITO.reduce((total, item) => total + item.cantidad, 0);
+  $carrito.textContent = totalCantidad;
+
+
   renderizarCarrito();
-  
+  guardarCarritoEnLocalStorage();
+
 }
+
+
+
 
 
 const renderizarCarrito = () => {
 
   const $contenedorCarrito = document.querySelector(`.contenedor_compras`);
+
+  $contenedorCarrito.innerHTML = ``;
   
 
   CARRITO.forEach(producto => {
@@ -94,16 +119,19 @@ const renderizarCarrito = () => {
     $div.appendChild($div2);
 
 
+
     const $div3 = document.createElement("div");
-    $div.classList.add(`columna_2`);
+    $div3.classList.add(`columna_2`);
     $div3.textContent = producto.nombre;
 
     $div.appendChild($div3);
 
-    const $div4 = document.createElement("div");
-    $div.classList.add(`columna_3`);
 
-    const $input = document.createElement(`ìnput`);
+
+    const $div4 = document.createElement("div");
+    $div4.classList.add(`columna_3`);
+
+    const $input = document.createElement("input");
     $input.type = `number`;
     $input.value = producto.cantidad;
 
@@ -111,45 +139,118 @@ const renderizarCarrito = () => {
 
     $div.appendChild($div4);
 
-    const $div5 = document.createElement("div");
-    $div.classList.add(`columna_4`);
-    $div5.textContent = `${producto.precio * producto.cantidad}`;
 
+
+    const $div5 = document.createElement("div");
+    $div5.classList.add(`columna_4`);
+    $div5.textContent = producto.precio;
+    
 
     $div.appendChild($div5);
 
-    const $div6 = document.createElement("div");
-    $div.classList.add(`columna_5`);
 
-    const $button = document.createElement(`button`)
-    $button.textContent = "X"
+
+    const $div6 = document.createElement("div");
+    $div6.classList.add(`columna_5`);
+
+
+
+    const $button = document.createElement("button")
+    $button.textContent = "X";
 
     $div6.appendChild($button);
     $div.appendChild($div6);
 
+
     $contenedorCarrito.appendChild($div);
 
+    $button.addEventListener(`click` , () => {
+      
+      eliminarProducto(producto.id);
+    })
+
+    $input.addEventListener(`change`, () =>{
+      cambiarCantidad(producto.id, +($input.value));
+      totalIndividual(producto.id, producto.precio, +($input.value));
+      
+    })
 
   })
 }
 
 
 
-const totalIndividual =(id, precio, cantidad) => {
-  const producto = CARRITO.find(producto => producto.id === id);
+const totalIndividual = (id, precio, cantidad) => {
+
+  const producto = CARRITO.find (producto => producto.id === id);
 
   if(cantidad > 0){
 
-    producto.total = precio*cantidad;
+    producto.total = precio * cantidad;
 
   }else{
 
     eliminarProducto (id);
   }
+
+  renderizarCarrito();
+
 }
+
+
 
 const eliminarProducto = (id) => {
   CARRITO = CARRITO.filter(producto => producto.id !== id);
 
   renderizarCarrito();
+  guardarCarritoEnLocalStorage();
 }
+
+
+const guardarCarritoEnLocalStorage = () => {
+  localStorage.setItem(`carrito`, JSON.stringify(CARRITO));
+}
+
+
+const obtenerCarritoDeLocalStorage = () => {
+  if (localStorage.getItem(`carrito`)){
+    CARRITO = JSON.parse(localStorage.getItem(`carrito`));
+  }else{
+    CARRITO = [];
+  }
+
+}
+
+
+
+const cambiarCantidad = (id, cantidad) => {
+
+  const producto = CARRITO.find(producto => producto.id === id);
+
+  producto.cantidad = cantidad;
+
+  renderizarCarrito();
+
+  guardarCarritoEnLocalStorage();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export  { obtenerProductos };

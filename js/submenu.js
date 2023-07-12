@@ -1,34 +1,48 @@
-const categoriasMenu = document.querySelector(`li:nth-child(1)`);
+import { mostrarProductos } from '../js/app.js';
 
-const submenu = document.querySelector(`.submenu`);
 
-categoriasMenu.addEventListener(`click` , () => {
-    submenu.classList.toggle(`hidden`);
+const categoriasMenu = document.querySelector('li:nth-child(1) ');
+
+const submenu = document.querySelector('.submenu');
+
+    categoriasMenu.addEventListener('click' , () => {
+        submenu.classList.toggle('hidden');
+
 })
 
-const filtroCategorias = (PRODUCTOS) => {
 
-    const cocina = document.querySelector(`#cocina`);
-    cocina.addEventListener(`click` , () => {
-        const cocina = PRODUCTOS.filter(producto => producto.categoria === `Cocina`);
-    })
-    console.log(cocina)
+function filtrosCategorias(PRODUCTOS) {
+    
+    const cocina = document.querySelector('#cocina');
 
+    cocina.addEventListener('click', () => {
 
-    const habitacion = document.querySelector(`#habitacion`);
-    habitacion.addEventListener(`click` , () => {
-        const habitacion = PRODUCTOS.filter(producto => producto.categoria === `Habitacion`);
-    })
-    console.log(habitacion)
+        const cocina = PRODUCTOS.filter(producto => producto.categoria === 'cocina');
+
+        mostrarProductos(cocina);
+    });
 
 
-    const living = document.querySelector(`#living`);
-    living.addEventListener(`click` , () => {
-        const living = PRODUCTOS.filter(producto => producto.categoria === `Living`);
-    })
-    console.log(living)
+    const habitacion = document.querySelector('habitacion');
+
+    habitacion.addEventListener('click', () => {
+
+        const habitacion = PRODUCTOS.filter(producto => producto.categoria === 'habitacion');
+
+        mostrarProductos(habitacion);
+    });
+
+
+    const living = document.querySelector('#living');
+
+    living.addEventListener('click', () => {
+
+        const living = PRODUCTOS.filter(producto => producto.categoria === 'living');
+
+        mostrarProductos(living);
+    });
 
 }
 
-export { filtroCategorias }
+export { filtrosCategorias };
 

@@ -12,34 +12,40 @@
 
 <body>
   <header>
+    
     <div class="logo">
       <img src="./assets/logos/logoblanco.png" alt="" class="logoPrincipal">
     </div>
+
+    <!-- Submenú de categorias y carrito -->
     <nav>
       <ul>
         <li>
-          <a class= "categorias" >Categorias</a>
-          <ul class="submenu hidden">
-            <li style="display: flex; align-items: center;">
-              <a id="cocina">Cocina</a>
-            </li>
-            <li><a id="habitacion">Habitación</a></li>
-            <li><a id="living">Living</a></li>
-          </ul>
+          <a class= "categorias"> 
+            Categorias 
+            <ul class= "submenu hidden">
+                <li style= "display: flex; align-items: center">
+                  <a id="cocina"> Cocina </a> </li>
+                  <li><a id="habitacion"> Habitación </a></li>
+                  <li><a id="living"> Living </a></li>
+            </ul>
           </a>
         </li>
 
+        <div>
           <a href="#" id="cart-icon">
             <img src="./assets/logos/icon_carrito.svg" alt="" class="cart">
             <span id="contador"> 0 </span>
           </a>
-        </li>
+        </div>
+
       </ul>
     </nav>
   </header>
   <main>
 
-    <!--Modal-->
+    <!-- Modal del carrito de compras -->
+
     <div class="modal" id="cart-modal">
         <div class="modal-content">
           
@@ -54,13 +60,13 @@
         </div>
     </div>
 
+    <!-- Contenedor de tarjetas para renderizar los productos -->
 
     <div class="contenedor-tarjetas container text-center">
           <div id="contenedorProductos" class="tarjetas-tienda row row-cols-1 row-cols-md-3"> </div>
     </div>
-
-
   </main>
+
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="./js/submenu.js" type="module"></script>
   <script src="./js/modal.js"></script>

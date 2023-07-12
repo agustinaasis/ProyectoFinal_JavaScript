@@ -1,7 +1,8 @@
-import { obtenerProductos } from "../services/services.js";
+import { obtenerProductos } from '../services/services.js';
+
+
 
 const $carrito = document.querySelector(`#contador`);
-
 
 
 
@@ -13,7 +14,7 @@ const cargaInicial = () => {
 
 }
 
-document.addEventListener(`DOMContentLoaded`, cargaInicial);
+document.addEventListener('DOMContentLoaded', cargaInicial);
 
 
 
@@ -28,7 +29,7 @@ async function mostrarProductos() {
 
   const productos = await obtenerProductos()
 
-  const contenedor = document.getElementById (`contenedorProductos`)
+  const contenedor = document.getElementById ('contenedorProductos')
 
   productos.forEach((producto) => {
 
@@ -49,14 +50,14 @@ async function mostrarProductos() {
     contenedor.appendChild(cardProducto)
 
     const btnAgregar = document.getElementById(`${producto.id}`)
-    btnAgregar.addEventListener("click" , () => {
+    btnAgregar.addEventListener('click' , () => {
         agregarAlCarrito(producto)
       })
     })
   }
 
+mostrarProductos();
 
-mostrarProductos()
 
 
 
@@ -98,21 +99,21 @@ const agregarAlCarrito = (producto) => {
 
 const renderizarCarrito = () => {
 
-  const $contenedorCarrito = document.querySelector(`.contenedor_compras`);
+  const $contenedorCarrito = document.querySelector('.contenedor_compras');
 
-  $contenedorCarrito.innerHTML = ``;
+  $contenedorCarrito.innerHTML = '';
   
 
   CARRITO.forEach(producto => {
 
     const $div = document.createElement("div");
-    $div.classList.add(`tbody`);
+    $div.classList.add('tbody');
 
     const $div2 = document.createElement("div");
-    $div2.classList.add(`columna_1`);
+    $div2.classList.add('columna_1');
 
     const $img = document.createElement("img");
-    $img.classList.add(`img_cart`);
+    $img.classList.add('img_cart');
     $img.src = producto.imagen;
 
     $div2.appendChild($img);
@@ -121,7 +122,7 @@ const renderizarCarrito = () => {
 
 
     const $div3 = document.createElement("div");
-    $div3.classList.add(`columna_2`);
+    $div3.classList.add('columna_2');
     $div3.textContent = producto.nombre;
 
     $div.appendChild($div3);
@@ -129,10 +130,10 @@ const renderizarCarrito = () => {
 
 
     const $div4 = document.createElement("div");
-    $div4.classList.add(`columna_3`);
+    $div4.classList.add('columna_3');
 
     const $input = document.createElement("input");
-    $input.type = `number`;
+    $input.type = 'number';
     $input.value = producto.cantidad;
 
     $div4.appendChild($input);
@@ -142,7 +143,7 @@ const renderizarCarrito = () => {
 
 
     const $div5 = document.createElement("div");
-    $div5.classList.add(`columna_4`);
+    $div5.classList.add('columna_4');
     $div5.textContent = producto.precio;
     
 
@@ -151,7 +152,7 @@ const renderizarCarrito = () => {
 
 
     const $div6 = document.createElement("div");
-    $div6.classList.add(`columna_5`);
+    $div6.classList.add('columna_5');
 
 
 
@@ -164,12 +165,12 @@ const renderizarCarrito = () => {
 
     $contenedorCarrito.appendChild($div);
 
-    $button.addEventListener(`click` , () => {
+    $button.addEventListener('click' , () => {
       
       eliminarProducto(producto.id);
     })
 
-    $input.addEventListener(`change`, () =>{
+    $input.addEventListener('change', () =>{
       cambiarCantidad(producto.id, +($input.value));
       totalIndividual(producto.id, producto.precio, +($input.value));
       
@@ -208,13 +209,13 @@ const eliminarProducto = (id) => {
 
 
 const guardarCarritoEnLocalStorage = () => {
-  localStorage.setItem(`carrito`, JSON.stringify(CARRITO));
+  localStorage.setItem('carrito', JSON.stringify(CARRITO));
 }
 
 
 const obtenerCarritoDeLocalStorage = () => {
-  if (localStorage.getItem(`carrito`)){
-    CARRITO = JSON.parse(localStorage.getItem(`carrito`));
+  if (localStorage.getItem('carrito')){
+    CARRITO = JSON.parse(localStorage.getItem('carrito'));
   }else{
     CARRITO = [];
   }
@@ -232,6 +233,7 @@ const cambiarCantidad = (id, cantidad) => {
   renderizarCarrito();
 
   guardarCarritoEnLocalStorage();
+
 }
 
 
@@ -240,6 +242,7 @@ const cambiarCantidad = (id, cantidad) => {
 
 
 
+export {  mostrarProductos }
 
 
 
@@ -247,10 +250,3 @@ const cambiarCantidad = (id, cantidad) => {
 
 
 
-
-
-
-
-
-
-export  { obtenerProductos };

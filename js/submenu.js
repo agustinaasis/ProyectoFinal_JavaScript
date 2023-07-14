@@ -1,52 +1,68 @@
+import { obtenerProductos } from '../services/services.js';
 import { mostrarProductos } from './app.js';
 
 
-
 const categoriasMenu = document.querySelector('li:nth-child(1) ');
+console.log(categoriasMenu);
 
 const submenu = document.querySelector('.submenu');
 
-    categoriasMenu.addEventListener('click' , () => {
-        submenu.classList.toggle('hidden');
+categoriasMenu.addEventListener('click', () => {
+    submenu.classList.toggle('hidden');
 
 })
 
 
-function filtrosCategorias(PRODUCTOS) {
+const cocina = document.querySelector('#cocina');
+
+cocina.addEventListener('click', async() => {
+
+    const PRODUCTOS = await obtenerProductos();
+
+    const cocina = PRODUCTOS.filter(producto => producto.categoria === 'cocina');
     
-    const cocina = document.querySelector('#cocina');
+    const contenedor = document.getElementById('contenedorProductos');
 
-    cocina.addEventListener('click', () => {
+    contenedor.innerHTML = '';
 
-        const cocina = PRODUCTOS.filter(producto => producto.categoria === 'cocina');
-
-        mostrarProductos(cocina);
-    });
+    mostrarProductos(cocina);
+});
 
 
-    const habitacion = document.querySelector('#habitacion');
+const habitacion = document.querySelector('#habitacion');
 
-    habitacion.addEventListener('click', () => {
+habitacion.addEventListener('click', async() => {
 
-        const habitacion = PRODUCTOS.filter(producto => producto.categoria === 'habitacion');
+    const PRODUCTOS = await obtenerProductos();
 
-        mostrarProductos(habitacion);
-    });
+    const habitacion = PRODUCTOS.filter(producto => producto.categoria === 'habitacion');
 
+    const contenedor = document.getElementById('contenedorProductos');
 
-    const living = document.querySelector('#living');
+    contenedor.innerHTML = '';
 
-    living.addEventListener('click', () => {
-
-        const living = PRODUCTOS.filter(producto => producto.categoria === 'living');
-
-        mostrarProductos(living);
-    });
-
-}
+    mostrarProductos(habitacion);
+});
 
 
-export { filtrosCategorias };
+const living = document.querySelector('#living');
+
+living.addEventListener('click', async() => {
+
+    const PRODUCTOS = await obtenerProductos();
+
+    const living = PRODUCTOS.filter(producto => producto.categoria === 'living');
+
+    const contenedor = document.getElementById('contenedorProductos');
+
+    contenedor.innerHTML = '';
+
+    mostrarProductos(living);
+});
+
+
+
+
 
 
 

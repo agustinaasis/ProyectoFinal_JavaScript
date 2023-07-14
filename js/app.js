@@ -1,4 +1,8 @@
 import { obtenerProductos } from '../services/services.js';
+<<<<<<< HEAD
+=======
+//import { filtrosCategorias } from './submenu.js';
+>>>>>>> 42ba82f5bc44da6c2ede7d3470fff00eb0dc2a2c
 import { toastify } from '../js/toastify.js';
 
 const $carrito = document.querySelector(`#contador`);
@@ -54,6 +58,7 @@ function mostrarProductos(productos) {
   })
 }
 
+//filtrosCategorias();
 
 const agregarAlCarrito = (producto) => {
 
@@ -105,7 +110,7 @@ const renderizarCarrito = () => {
 
     const $img = document.createElement("img");
     $img.classList.add('img_cart');
-    $img.src = producto.imagen;
+    //$img.src = producto.imagen;
 
     $div2.appendChild($img);
     $div.appendChild($div2);
@@ -226,6 +231,7 @@ const cambiarCantidad = (id, cantidad) => {
 }
 
 export { mostrarProductos }
+<<<<<<< HEAD
 
 
 
@@ -233,6 +239,8 @@ export { mostrarProductos }
 
 
 
+=======
+>>>>>>> 42ba82f5bc44da6c2ede7d3470fff00eb0dc2a2c
 
 
 

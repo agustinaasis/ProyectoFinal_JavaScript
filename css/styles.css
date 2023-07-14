@@ -4,7 +4,6 @@ header {
   background-color: #5c5b5b;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
 }
 
 nav ul {
@@ -20,11 +19,6 @@ nav ul li a {
   cursor: pointer;
 }
 
-.categorias:hover {
-  color: #3e3c3c;
-  text-decoration: underline;
-}
-
 .logoPrincipal {
   width: 250px;
 }
@@ -36,15 +30,15 @@ nav ul li a {
 }
 
 .contador {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #fff;
 }
 
 .submenu {
   position: absolute;
-  top: 70px;
+  top: 40px;
   right: 0;
-  width: 370px;
+  width: 530px;
   background-color: #5c5b5b;
   z-index: 999;
   padding: 20px 0;
@@ -52,6 +46,15 @@ nav ul li a {
 
 .hidden {
   display: none;
+}
+
+.categorias {
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+}
+.categorias:hover {
+  color: #baabab;
 }
 
 .submenu ul {
@@ -66,7 +69,7 @@ nav ul li a {
 
 .submenu li a {
   display: block;
-  padding: 5px 10px;
+  padding: 18px;
   background-color: #fbfbfb;
   color: #fff;
   text-decoration: none;

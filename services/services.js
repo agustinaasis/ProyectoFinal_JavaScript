@@ -1,4 +1,4 @@
-import { filtrosCategorias } from '../js/submenu.js';
+// import { filtrosCategorias } from '../js/submenu.js';
 
 
 async function obtenerProductos() {
@@ -12,7 +12,7 @@ async function obtenerProductos() {
     
     }
 
-    filtrosCategorias();
+    // filtrosCategorias();
 
 
 export { obtenerProductos };

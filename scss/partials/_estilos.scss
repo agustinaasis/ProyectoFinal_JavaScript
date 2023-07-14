@@ -37,10 +37,13 @@ nav ul li a {
     width: 35px;
 }
 
-span{
-    text-decoration: none;
-    color: #fff;
-}
+.contador{
+        font-size: 1.2em;
+        color: #fff;
+    }
+    
+
+
 
 
 
@@ -58,6 +61,7 @@ span{
 .hidden {
     display: none;
 }
+
 .submenu ul {
     display: flex;
     flex-direction: column;
@@ -82,6 +86,7 @@ span{
 
 
 
+
 // Estilos tarjetas //
 
 .contenedor-tarjetas{
@@ -100,8 +105,6 @@ span{
 .descripcion{
     font-size: 0.9em;
 }
-
-
 
 .tarjeta {
     box-sizing: border-box;
@@ -127,11 +130,14 @@ button {
     color: #fff;
     border: none;
     padding: 10px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-  /* ESTILOS DEL MODAL */
+
+
+//  Estilos del modal del carrito //
+
+
 .modal {
     display: none;
     position: fixed;
@@ -149,7 +155,6 @@ button {
     margin: 10% auto;
     padding: 20px;
     border-radius: 5px;
-    /* max-width: 400px; */
     width: 50%;
     text-align: center;
     position: relative;
@@ -165,7 +170,12 @@ button {
     cursor: pointer;
 }
 
-  /* ESTILOS DE LA TABLA DEL CARRITO */
+
+
+
+  // Estilos tabla del carrito //
+
+
 .tbody {
     display: flex;
     align-items: center;

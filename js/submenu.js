@@ -1,4 +1,5 @@
-import { mostrarProductos } from '../js/app.js';
+import { mostrarProductos } from './app.js';
+
 
 
 const categoriasMenu = document.querySelector('li:nth-child(1) ');
@@ -23,7 +24,7 @@ function filtrosCategorias(PRODUCTOS) {
     });
 
 
-    const habitacion = document.querySelector('habitacion');
+    const habitacion = document.querySelector('#habitacion');
 
     habitacion.addEventListener('click', () => {
 
@@ -44,5 +45,9 @@ function filtrosCategorias(PRODUCTOS) {
 
 }
 
+
 export { filtrosCategorias };
+
+
+
 

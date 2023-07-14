@@ -18,10 +18,11 @@
     </div>
 
     <!-- Submenú de categorias y carrito -->
+
     <nav>
       <ul>
         <li>
-          <a class= "categorias"> 
+          <a class= "categorias row"> 
             Categorias 
             <ul class= "submenu hidden">
                 <li style= "display: flex; align-items: center">
@@ -33,9 +34,9 @@
         </li>
 
         <div>
-          <a href="#" id="cart-icon">
-            <img src="./assets/logos/icon_carrito.svg" alt="" class="cart">
-            <span id="contador"> 0 </span>
+          <a href="#" id="cart-icon" >
+            <img src="./assets/logos/icon_carrito.svg" alt="carrito de compras" class="cart row-co">
+            <span id="contador" class="contador"> 0 </span>
           </a>
         </div>
 
@@ -63,7 +64,7 @@
     <!-- Contenedor de tarjetas para renderizar los productos -->
 
     <div class="contenedor-tarjetas container text-center">
-          <div id="contenedorProductos" class="tarjetas-tienda row row-cols-1 row-cols-md-3"> </div>
+          <div id="contenedorProductos" class="tarjetas-tienda row row-cols-md-3"> </div>
     </div>
   </main>
 

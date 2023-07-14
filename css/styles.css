@@ -35,8 +35,8 @@ nav ul li a {
   width: 35px;
 }
 
-span {
-  text-decoration: none;
+.contador {
+  font-size: 1.2em;
   color: #fff;
 }
 
@@ -118,11 +118,9 @@ button {
   color: #fff;
   border: none;
   padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-/* ESTILOS DEL MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -140,7 +138,6 @@ button {
   margin: 10% auto;
   padding: 20px;
   border-radius: 5px;
-  /* max-width: 400px; */
   width: 50%;
   text-align: center;
   position: relative;
@@ -156,7 +153,6 @@ button {
   cursor: pointer;
 }
 
-/* ESTILOS DE LA TABLA DEL CARRITO */
 .tbody {
   display: flex;
   align-items: center;

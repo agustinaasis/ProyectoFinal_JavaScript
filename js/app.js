@@ -1,4 +1,6 @@
 import { obtenerProductos } from '../services/services.js';
+import { filtrosCategorias } from './submenu.js';
+import { toastify } from '../js/toastify.js';
 
 
 
@@ -27,6 +29,8 @@ let CARRITO = [];
 
 async function mostrarProductos() {
 
+
+  
   const productos = await obtenerProductos()
 
   const contenedor = document.getElementById ('contenedorProductos')
@@ -57,6 +61,7 @@ async function mostrarProductos() {
   }
 
 mostrarProductos();
+filtrosCategorias();
 
 
 
@@ -87,6 +92,7 @@ const agregarAlCarrito = (producto) => {
   const totalCantidad = CARRITO.reduce((total, item) => total + item.cantidad, 0);
   $carrito.textContent = totalCantidad;
 
+  toastify("Producto agregado al carrito", "success");
 
   renderizarCarrito();
   guardarCarritoEnLocalStorage();

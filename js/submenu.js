@@ -3,7 +3,7 @@ import { mostrarProductos } from './app.js';
 
 
 const categoriasMenu = document.querySelector('li:nth-child(1) ');
-console.log(categoriasMenu);
+
 
 const submenu = document.querySelector('.submenu');
 
